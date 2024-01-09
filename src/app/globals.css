@@ -1,6 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  .hyperlink {
+    @apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600
+  }
+}
+
 :root {
   --cal-poly-green: #2e5339ff;
   --hunter-green: #495f41ff;
@@ -10,8 +17,13 @@
 }
 
 body {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: block;
   place-content: center;
   background-color: #f2ebd0;
 }
+
+.content {
+  /* padding: 1rem; */
+}
+
