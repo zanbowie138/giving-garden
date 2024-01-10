@@ -12,7 +12,7 @@ export default function Search() {
         <>
             <div className="block bg-white w-full p-4 pt-8">
                 <h1 className="text-3xl font-semibold mb-2">Seach Charities</h1>
-                <h3>Search through Giving Garden's extensive database of charities, vetted thoroughly through our <Link href="#" className="hyperlink">verification system</Link>.</h3>
+                <h3>Search through Giving Garden&apos;s extensive database of charities, vetted thoroughly through our <Link href="#" className="hyperlink">verification system</Link>.</h3>
             </div>
         </>
     );
