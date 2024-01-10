@@ -20,10 +20,6 @@ body {
   /* min-height: 100vh; */
   display: block;
   place-content: center;
-  background-color: #f2ebd0;
-}
-
-.content {
-  /* padding: 1rem; */
+  background-color: #ffffff;
 }
 

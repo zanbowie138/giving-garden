@@ -18,6 +18,7 @@ const config: Config = {
           50: '#a2ad91ff',
           100: '#043830',
           150: '#2e5339ff',
+          200: '#3f6e3f',
         },
         theme_pink: {
           50: '#ffccc9ff',
