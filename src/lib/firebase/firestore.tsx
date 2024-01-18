@@ -6,6 +6,7 @@ export class charity {
     img_href: string = "/question.png";
     rating: number = 0;
     tags: Array<string> = [];
+    verified: boolean = false;
 };
 
 export async function getCharities(db: Firestore): Promise<charity[]> {
