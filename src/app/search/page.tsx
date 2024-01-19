@@ -29,7 +29,7 @@ export default async function Search() {
                         <select name="sort">
                             <option value="relevance">Relevance</option>
                             <option value="date_updated">Date Updated</option>
-                            <option value="impact">Impact</option>
+                            <option value="rating">Rating</option>
                             <option value="alphabetically">Alphabetically</option>
                         </select>
                     </div>
@@ -37,7 +37,7 @@ export default async function Search() {
             </div>
             <div className="flex flex-row w-full">
                 <div className="basis-1/4 bg-gray-200 rounded-sm">
-                    <h1 className="text-1xl font-semibold mb-2">Filters</h1>
+                    <h1 className="text-1xl font-semibold mb-2 text-center">Filters</h1>
                 </div>
                 <div className="bg-gray-100 w-full p-4 rounded-sm">
                     {charities.map((o, index) =>
