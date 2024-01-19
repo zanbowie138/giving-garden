@@ -1,13 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-import firebase_app from '../../firebase/firebase_app';
-import { charity, getCharities } from '../../firebase/firestore';
-import CharityCard from '../../components/cards/charity_card';
-
-const db = getFirestore(firebase_app);
+import {db} from '@/lib/firebase/firebase';
+import { getCharities } from '@/lib/firebase/firestore';
+import CharityCard from '@/components/cards/charity_card';
 
 export const metadata: Metadata = {
     title: 'Search | Giving Garden',
@@ -25,13 +20,24 @@ export default async function Search() {
                     <input className="w-full p-2 h-full border-2 rounded-sm border-black" type="text" placeholder="Search by name, tag, location..."/>
                     <button className="bg-sky-400 rounded-md w-fit px-5">Search</button>
                 </div>
+                <div className="flex flex-row">
+                    <div className="flex flex-row ml-auto">
+                        <h2>Sort by: </h2>
+                        <select name="sort">
+                            <option value="relevance">Relevance</option>
+                            <option value="date_updated">Date Updated</option>
+                            <option value="impact">Impact</option>
+                            <option value="alphabetically">Alphabetically</option>
+                        </select>
+                    </div>
+                </div>
+                <h3 className="mb-2 text-sm">{new Intl.NumberFormat().format(charities.length)} results found.</h3>
             </div>
-            <div className="flex flex-row w-full pt-8">
+            <div className="flex flex-row w-full">
                 <div className="basis-1/4 bg-gray-200 rounded-sm">
                     <h1 className="text-1xl font-semibold mb-2">Filters</h1>
                 </div>
                 <div className="bg-gray-100 w-full p-4 rounded-sm">
-                    <h3 className="mb-2">{new Intl.NumberFormat().format(charities.length)} results found.</h3>
                     {charities.map((o, index) =>
                         CharityCard(o)
                     )}

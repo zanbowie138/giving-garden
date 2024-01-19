@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { charity } from '../../firebase/firestore';
+import { charity } from '../../lib/firebase/firestore';
 import Image from 'next/image'
 
 export default function CharityCard(charity: charity) {
