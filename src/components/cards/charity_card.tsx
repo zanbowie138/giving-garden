@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function CharityCard(charity: charity) {
     return (
-        <div className="flex flex-row mb-10 bg-white rounded-md p-5">
+        <div className="flex flex-row mb-10 bg-white rounded-md p-5 border-8 bg-theme_green-200">
             <div className="basis-1/4">
                 <Image src={charity.img_href} alt={`Image of ${charity.name}.`} width="125" height="125" className="basis-1/4"></Image>
             </div>
