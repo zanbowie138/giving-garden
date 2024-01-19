@@ -1,8 +1,8 @@
 import { Firestore, collection, getDocs } from "firebase/firestore";
 
 export class charity { 
-    name: string = "Default Charity Name";
-    description: string = "This is the default charity description.";
+    name: string = "Unnamed Charity";
+    description: string = "No description has been provided.";
     img_href: string = "/question.png";
     rating: number = 0;
     tags: Array<string> = [];
