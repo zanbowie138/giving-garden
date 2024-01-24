@@ -6,7 +6,7 @@ export class charity {
     path_name: string = "THIS IS NOT A VALID PATH NAME";
     name: string = "Unnamed Charity";
     description: string = "No description has been provided.";
-    img_href: string = "/question.png";
+    img_href: string = "/leaf.png";
     rating: number = 0;
     tags: Array<string> = [];
     verified: boolean = false;
@@ -22,6 +22,8 @@ export async function getCharities(db: Firestore): Promise<charity[]> {
     });
     return charities;
 }
+
+
 
 export async function getCharityPathList(): Promise<string[]> {
     const querySnapshot = await getDocs(collection(db, "charities"));

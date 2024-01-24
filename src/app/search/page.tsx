@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { db } from '@/lib/firebase/firebase';
-import { getCharities } from '@/lib/firebase/firestore';
+import { getCharities, getCharityPathList } from '@/lib/firebase/firestore';
 import CharityCard from '@/components/cards/charity_card';
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export default async function Search() {
                 <h3 className="mb-5" >Search through Giving Garden&apos;s extensive database of charities, vetted thoroughly through our <Link href="#" className="hyperlink">verification system</Link>.</h3>
                 <div className="flex flex-row gap-6">
                     <input className="w-full p-2 h-full border-2 rounded-sm border-black" type="text" placeholder="Search by name, tag, location..." />
-                    <button className="bg-sky-400 rounded-md w-fit px-5">Search</button>
+                    <button className="bg-sky-400 hover:drop-shadow-md rounded-md w-fit px-5">Search</button>
                 </div>
                 <hr className="my-5"></hr>
                 <div className="flex flex-row content-center">
