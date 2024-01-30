@@ -6,6 +6,8 @@ export class charity {
     path_name: string = "THIS IS NOT A VALID PATH NAME";
     name: string = "Unnamed Charity";
     description: string = "No description has been provided.";
+    website: string = "#"
+    location: string = "City, State"
     img_href: string = "/leaf.png";
     rating: number = 0;
     tags: Array<string> = [];

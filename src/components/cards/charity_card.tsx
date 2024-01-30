@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { charity } from '../../lib/firebase/firestore';
 import Image from 'next/image'
-import Rating from '../Rating';
+import Rating from '../addons/Rating';
 
 export default function CharityCard(charity: charity) {
     return (
@@ -13,7 +13,7 @@ export default function CharityCard(charity: charity) {
                 <div className="basis-1/2 p-5">
                     <h1 className="text-xl underline">{charity.name}</h1>
                     <div className="h-max">
-                        <h3>{charity.description}</h3>
+                        <h3>{truncate(charity.description,150)}</h3>
                         <Link href={`/charities/${charity.path_name}`} className="hyperlink text-sm">Read more</Link>
                     </div>
                 </div>
@@ -32,3 +32,7 @@ export default function CharityCard(charity: charity) {
         </div>
     );
 }
+
+function truncate(str: string, n: number){
+    return (str.length > n) ? str.slice(0, n-1) + "..." : str;
+};
