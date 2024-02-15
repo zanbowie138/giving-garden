@@ -1,7 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import Header from '../components/core/Header'
-import CharityCard from '../components/cards/charity_card'
 
 export default function Home() {
   return (
