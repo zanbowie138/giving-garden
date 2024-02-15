@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { charity } from '../../lib/firebase/firestore';
 import Image from 'next/image'
 import Rating from '../addons/Rating';
+import Tag from '../addons/Tag';
 
 export default function CharityCard(charity: charity) {
     return (
@@ -19,10 +20,19 @@ export default function CharityCard(charity: charity) {
                 </div>
                 <div className="basis-1/4 p-5 border-l-2">
                     <h3 className="text-lg">Rating:
-                        <span className="inline-block align-top m-1" title={`Rating: ${charity.rating}`}>
+                    </h3>
+                    <span className="inline-block mt-2" title={`Rating: ${charity.rating}`}>
                             {Rating(charity.rating)}
                         </span>
-                    </h3>
+                    <div className="my-2">
+                        <h3 className="text-lg mb-2">Tags:</h3>
+                        <div>
+                            {charity.tags.map((tag_name, index) => (
+                                <span key={index}>{Tag(tag_name)}</span>
+                            ))}
+                            {charity.tags.length == 0 && <h3>No tags have been added.</h3>}
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className="p-3">
