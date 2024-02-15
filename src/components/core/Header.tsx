@@ -2,7 +2,7 @@ import Link from 'next/link'
 const nav_link: { name: string, href: string }[] = [
     { name: "Home", href: "/" },
     { name: "Search", href: "/search" },
-    { name: "About Us", href: "/about" },
+    { name: "About Us", href: "#" },
     { name: "Budget", href: "#" },
     { name: "Apply", href: "#" }
 ];

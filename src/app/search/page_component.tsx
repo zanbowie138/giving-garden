@@ -61,7 +61,7 @@ export default function SearchPage() {
             </div>
             <div className="flex flex-row w-full">
                 <div className="basis-1/4 bg-gray-200 rounded-sm">
-                    <h1 className="text-1xl font-semibold m-2 text-center">Filters</h1>
+                    {/* <h1 className="text-1xl font-semibold m-2 text-center">Filters</h1> */}
                 </div>
                 <div className="bg-gray-100 w-full p-4 rounded-sm" id="charity-list">
                     <CharityList charities={charities}/>
