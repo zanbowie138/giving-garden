@@ -19,9 +19,9 @@ export default function CharityCard(charity: charity) {
                     </div>
                 </div>
                 <div className="basis-1/4 p-5 border-l-2">
-                    <h3 className="text-lg">Rating:
-                    </h3>
-                    <span className="inline-block mt-2" title={`Rating: ${charity.rating}`}>
+                    <h3 className="text-md mb-2 underline">{charity.verified? "Verified: Yes": "Verified: No"}</h3>
+                    <h3 className="text-lg">Rating:</h3>
+                    <span className="inline-block mb-2" title={`Rating: ${charity.rating}`}>
                             {Rating(charity.rating)}
                         </span>
                     <div className="my-2">
