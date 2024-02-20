@@ -21,10 +21,10 @@ export default function CharityCard(charity: charity) {
                 <div className="basis-1/4 p-5 border-l-2">
                     <h3 className="text-md mb-2 underline">{charity.verified? "Verified: Yes": "Verified: No"}</h3>
                     <h3 className="text-lg">Rating:</h3>
-                    <span className="inline-block mb-2" title={`Rating: ${charity.rating}`}>
+                    <span className="inline-block" title={`Rating: ${charity.rating}`}>
                             {Rating(charity.rating)}
                         </span>
-                    <div className="my-2">
+                    <div className="">
                         <h3 className="text-lg mb-2">Tags:</h3>
                         <div>
                             {charity.tags.map((tag_name, index) => (
