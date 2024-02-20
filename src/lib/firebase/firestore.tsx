@@ -7,7 +7,7 @@ export class charity {
     name: string = "Unnamed Charity";
     description: string = "No description has been provided.";
     website: string = "#"
-    location: string = "City, State"
+    location: string = "None provided."
     img_href: string = "/leaf.png";
     rating: number = 0;
     tags: Array<string> = [];
